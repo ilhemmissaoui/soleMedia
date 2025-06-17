@@ -15,15 +15,15 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
           <div>
             <img
               className="dark-logo"
-              src="/assets/img/Group.png"
+              src="/assets/img/footerLogo.svg"
               alt="Dark Logo"
-              style={{ maxHeight: "80px", width: "auto" }}
+              style={{ maxHeight: "30px", width: "auto" }}
             />
             <img
               className="light-logo"
-              src="/assets/img/Group.png"
+              src="/assets/img/footerLogo.svg"
               alt="Light Logo"
-              style={{ maxHeight: "80px", width: "auto" }}
+              style={{ maxHeight: "30px", width: "auto" }}
             />
           </div>
 
@@ -62,7 +62,7 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
               </div>
               <div>
                 <p>Office Address (Tunisia)</p>
-                <h5 className="mb-0">Av. de Yasser Arafat, Sousse 4054</h5>
+                <h6 className="mb-0">Av. de Yasser Arafat, Sousse 4054</h6>
               </div>
             </div>
 
@@ -83,7 +83,7 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
               </div>
               <div>
                 <p>Phone Number (TN)</p>
-                <h5 className="mb-0">+216 58 944 414</h5>
+                <h6 className="mb-0">+216 58 944 414</h6>
               </div>
             </div>
 
@@ -115,7 +115,7 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
 
               <div>
                 <p>Email (TN)</p>
-                <h5 className="mb-0">info@soledigitalmedia.tn</h5>
+                <h6 className="mb-0">info@soledigitalmedia.tn</h6>
               </div>
             </div>
 
@@ -137,9 +137,9 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
               </div>
               <div>
                 <p>Office Address (Canada)</p>
-                <h5 className="mb-0">
+                <h6 className="mb-0">
                   3465 Platinum Dr #208, Mississauga, ON L5M 2S1
-                </h5>
+                </h6>
               </div>
             </div>
 
@@ -160,7 +160,7 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
               </div>
               <div>
                 <p>Phone Number (CA)</p>
-                <h5 className="mb-0">+1(905) 745 4395</h5>
+                <h6 className="mb-0">+1(905) 745 4395</h6>
               </div>
             </div>
 
@@ -192,7 +192,7 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
 
               <div>
                 <p>Email (CA)</p>
-                <h5 className="mb-0">info@soledigitalmedia.com</h5>
+                <h6 className="mb-0">info@soledigitalmedia.com</h6>
               </div>
             </div>
           </div>

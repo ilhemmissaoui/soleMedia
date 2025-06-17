@@ -53,15 +53,15 @@ const HeaderOne = ({ style_2 }: any) => {
             <Link className="navbar-brand" href="/">
               <img
                 className="dark-logo"
-                src="/assets/img/Group.png"
+                src="/assets/img/footerLogo.svg"
                 alt=""
-                style={{ maxWidth: "80px", height: "auto" }}
+                style={{ maxWidth: "180px", height: "auto" }}
               />
               <img
                 className="light-logo"
-                src="/assets/img/Group.png"
+                src="/assets/img/footerLogo.svg"
                 alt=""
-                style={{ maxWidth: "80px", height: "auto" }}
+                style={{ maxWidth: "180px", height: "auto" }}
               />
             </Link>
 
