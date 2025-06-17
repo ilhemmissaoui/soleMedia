@@ -7,7 +7,7 @@ export const metadata = {
   description: "Vorix - Creative Digital Agency HTML Template",
 };
 
-const index = () => {
+const NotFoundPage = () => {
   return (
     <Wrapper>
       <ErrorArea />
@@ -15,4 +15,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NotFoundPage;
