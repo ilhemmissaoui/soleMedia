@@ -1,0 +1,85 @@
+.stepper-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 950px; /* reduced for better centering */
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 0;  /* increased padding */
+}
+
+.stepper-wrap::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: none;
+  border-top: 2px dashed #ff971e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 10px; /* Added margin-top to move line down */
+  z-index: 0;
+}
+
+.stepper-wrap div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  margin: 0; /* removed side margins */
+  width: 120px; /* fixed width for better alignment */
+  position: relative;  /* Added for pseudo-element positioning */
+}
+
+/* Remove the individual lines between dots */
+.stepper-wrap div:not(:last-child)::after {
+  display: none;
+}
+
+.stepper-wrap span {
+  width: 50px;
+  height: 50px;
+  background: #ff971e;
+  border-radius: 50%;
+  margin: 10px 0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.stepper-wrap div:nth-child(2) span {
+  animation-delay: 0.5s;
+}
+
+.stepper-wrap div:nth-child(3) span {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(-50%) scaleY(1);
+  }
+  50% {
+    transform: translateY(-50%) scaleY(2);
+  }
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
