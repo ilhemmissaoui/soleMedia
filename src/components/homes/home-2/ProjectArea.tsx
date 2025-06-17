@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -121,11 +122,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -148,11 +149,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -175,11 +176,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -202,11 +203,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -228,11 +229,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -254,11 +255,11 @@ const ProjectArea = () => {
                   />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                    <a href="/portfolio">
+                    <Link href="/portfolio">
                       <span className="material-symbols-outlined">
                         arrow_outward
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

@@ -2,6 +2,7 @@
 import React from "react";
 import styles from "./TikTik.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const TikTok = () => {
   return (
@@ -132,17 +133,13 @@ const TikTok = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <motion.a
+                <Link
                   href="/tiktok-agency"
                   className="btn btn-primary d-inline-block"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.6, delay: 0.7 }}
                 >
                   <motion.span>READ MORE</motion.span>
                   <motion.span>READ MORE</motion.span>
-                </motion.a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroArea = () => {
   return (
@@ -69,12 +70,9 @@ const HeroArea = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.1, duration: 0.6 }}
               >
-                <motion.a
+                <Link
                   href="/contact"
                   className="btn btn-primary d-inline-block"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.6 }}
                 >
                   <motion.span
                     initial={{ opacity: 0 }}
@@ -90,7 +88,7 @@ const HeroArea = () => {
                   >
                     CONTACT US
                   </motion.span>
-                </motion.a>
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

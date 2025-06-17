@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const TikTok = () => {
@@ -141,9 +142,9 @@ const TikTok = () => {
                   >
                     <span>Our Services</span>
                   </a>
-                  <a href="/contact" className="btn btn-outline">
+                  <Link href="/contact" className="btn btn-outline">
                     <span>Get in Touch</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

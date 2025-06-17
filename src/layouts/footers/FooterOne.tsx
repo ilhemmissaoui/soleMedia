@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const FooterOne = ({ style_2 }: any) => {
@@ -84,19 +85,19 @@ const FooterOne = ({ style_2 }: any) => {
 
                 <ul className="footer-nav">
                   <li>
-                    <a href="/service">UI/UX Design</a>
+                    <Link href="/service">UI/UX Design</Link>
                   </li>
                   <li>
-                    <a href="/service">Digital Marketing</a>
+                    <Link href="/service">Digital Marketing</Link>
                   </li>
                   <li>
-                    <a href="/service">Web Development</a>
+                    <Link href="/service">Web Development</Link>
                   </li>
                   <li>
-                    <a href="/service">Content Creation</a>
+                    <Link href="/service">Content Creation</Link>
                   </li>
                   <li>
-                    <a href="/service">SEO Optimizaation</a>
+                    <Link href="/service">SEO Optimizaation</Link>
                   </li>
                 </ul>
               </div>
@@ -108,19 +109,19 @@ const FooterOne = ({ style_2 }: any) => {
 
                 <ul className="footer-nav">
                   <li>
-                    <a href="/about-us">About Us</a>
+                    <Link href="/about-us">About Us</Link>
                   </li>
                   <li>
-                    <a href="/portfolio">Portfolio</a>
+                    <Link href="/portfolio">Portfolio</Link>
                   </li>
                   <li>
-                    <a href="/tiktok-agency">TikTok Agency</a>
+                    <Link href="/tiktok-agency">TikTok Agency</Link>
                   </li>
                   <li>
-                    <a href="/blog">Blogs</a>
+                    <Link href="/blog">Blogs</Link>
                   </li>
                   <li>
-                    <a href="/service">Services</a>
+                    <Link href="/service">Services</Link>
                   </li>
                 </ul>
               </div>

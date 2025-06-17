@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const AboutArea = () => {
   return (
@@ -114,10 +115,10 @@ const AboutArea = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 1, duration: 0.5 }}
                 >
-                  <a href="/service" className="btn btn-primary mt-1">
+                  <Link href="/service" className="btn btn-primary mt-1">
                     <span>Our Services</span>
                     <span>Our Services</span>
-                  </a>
+                  </Link>
                 </motion.div>
               </div>
             </motion.div>
