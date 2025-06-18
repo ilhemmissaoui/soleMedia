@@ -25,7 +25,7 @@ const WorkprocessArea = () => {
     {
       number: 3,
       title: "Our Mission",
-      text: "To empower brands and creators through intelligent, high-impact digital solutions that inspire connection, growth, and long-term value.",
+      text: "To empower brands and creators through intelligent, high-impact, innovative digital solutions that inspire connection, growth, and long-term value.",
     },
     {
       number: 4,
@@ -90,7 +90,7 @@ const WorkprocessArea = () => {
                           display: "-webkit-box",
                           WebkitLineClamp: expandedCards.includes(index)
                             ? "unset"
-                            : "2",
+                            : "3", // Default to 3 lines before truncating
                           WebkitBoxOrient: "vertical",
                           overflow: "hidden",
                           lineHeight: "1.5",
@@ -98,7 +98,8 @@ const WorkprocessArea = () => {
                       >
                         {card.text}
                       </p>
-                      {card.text.split(" ").length > 30 && (
+                      {/* Ensure Read More button works for both long and short texts */}
+                      {card.text.length > 50 && ( // Show Read More button if the text length is more than 50 characters
                         <button
                           onClick={() => toggleCard(index)}
                           style={{
