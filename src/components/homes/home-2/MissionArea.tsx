@@ -59,8 +59,9 @@ const MissionArea = () => {
                   whileInView="animate"
                   viewport={{ once: true }}
                   variants={fadeInUp}
+                  style={{ color: "#ff971e" }}
                 >
-                  <h1 style={{ color: "#ff971e" }}>Sole Digital Media</h1>
+                  Sole Digital Media
                 </motion.h1>
                 <motion.h4
                   initial="initial"

@@ -100,55 +100,51 @@ const ServiceArea = () => {
           <div className="row g-4 g-lg-5">
             {services.map((item, i) => (
               <div key={i} className="col-12 col-md-6 col-xl-4">
-              <Link href={item.link}>
-  <div
-    onMouseEnter={() => setActiveIndex(i)}
-    onMouseLeave={() => setActiveIndex(null)}
-    className={`service-slide-card ${activeIndex === i ? "active" : ""}`}
-    style={{
-      backgroundImage:
-        activeIndex === i
-          ? "none"
-          : `url(${item.bgImage})`, // Correct the background image URL string
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundColor: activeIndex === i ? "#ff971e" : "transparent", // Background color when not active
-    }}
-  >
-    <span
-      className="material-symbols-outlined"
-      style={{
-        color: "white",
-      }}
-    >
-      {item.icon}
-    </span>
-
-    <h2
-      style={{
-        bottom: `${activeIndex === i ? "140px" : "50px"}`, // Adjust position based on active state
-        color: "white",
-        transition: "all 0.3s ease", // Smooth transition
-        opacity: 1, // Ensure the title is always visible
-      }}
-    >
-      {item.title}
-    </h2>
-
-    <p
-      className="mb-0"
-      style={{
-        bottom: `${activeIndex === i ? "45px" : "50px"}`, // Adjust position based on active state
-        color: "white",
-        transition: "all 0.3s ease", // Smooth transition
-        opacity: 1, // Ensure the description is always visible
-      }}
-    >
-      {item.description}
-    </p>
-  </div>
-</Link>
-
+                <Link href={item.link}>
+                  <div
+                    onMouseEnter={() => setActiveIndex(i)}
+                    onMouseLeave={() => setActiveIndex(null)}
+                    className={`service-slide-card ${
+                      activeIndex === i ? "active" : ""
+                    }`}
+                    style={{
+                      backgroundImage:
+                        activeIndex === i
+                          ? "none"
+                          : `linear-gradient(rgba(69, 69, 69, 0.7), rgba(70, 70, 70, 0.7)), url(${item.bgImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundColor:
+                        activeIndex === i ? "#ff971e" : "transparent",
+                    }}
+                  >
+                    <span
+                      className="material-symbols-outlined"
+                      style={{
+                        color: "white",
+                      }}
+                    >
+                      {item.icon}
+                    </span>
+                    <h2
+                      style={{
+                        bottom: `${activeIndex === i ? "140px" : ""}`,
+                        color: "white",
+                      }}
+                    >
+                      {item.title}
+                    </h2>
+                    <p
+                      className="mb-0"
+                      style={{
+                        bottom: `${activeIndex === i ? "45px" : ""}`,
+                        color: "white",
+                      }}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
