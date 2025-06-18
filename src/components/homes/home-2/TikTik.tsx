@@ -97,9 +97,9 @@ const TikTok = () => {
                 transition={{ duration: 0.6 }}
               >
                 <span className="subtitle">Welcome to</span>
-                <motion.h3 className="mb-3">
-                  TIKTOK CREATOR NETWORK AGENCY
-                </motion.h3>
+                <motion.h1 className="mb-3">
+                  <h1> TIKTOK CREATOR NETWORK AGENCY</h1>
+                </motion.h1>
               </motion.div>
               <motion.h6
                 className="mb-0"

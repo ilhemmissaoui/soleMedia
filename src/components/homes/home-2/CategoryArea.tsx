@@ -1,7 +1,5 @@
-
 // import React from 'react';
 // import Marquee from "react-fast-marquee";
-
 
 // const CategoryArea = () => {
 //   return (
@@ -25,7 +23,7 @@
 // };
 
 // export default CategoryArea;
- "use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
@@ -46,12 +44,20 @@ const CategoryArea = () => {
       <div className="marquee3k" data-speed="1">
         <Marquee gradient={false} speed={50}>
           <h2 className="d-flex align-items-center mb-0">
-            <span>#</span>
+            <span>-</span>
             <span>Web Design</span>
-            <span>#</span>
+            <span>-</span>
             <span>Web Development</span>
-            <span>#</span>
+            <span>-</span>
             <span>UI/UX Design</span>
+            <span>-</span>
+            <span>Content Creation</span>
+            <span>-</span>
+            <span>SEO Optimizaation</span>
+            <span>-</span>
+            <span>Video Production</span>
+            <span>-</span>
+            <span>Influencers Marketing</span>
           </h2>
         </Marquee>
       </div>
@@ -60,4 +66,3 @@ const CategoryArea = () => {
 };
 
 export default CategoryArea;
-

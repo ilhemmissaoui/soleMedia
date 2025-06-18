@@ -1,26 +1,28 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const FaqArea = ({ style_2 }: any) => {
+  const [activeIndex, setActiveIndex] = useState<number>(1); // Default to first item being active
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 1.2, ease: "easeOut" }, // Increased from 0.6 to 1.2
+    transition: { duration: 1.2, ease: "easeOut" },
   };
 
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.3, // Increased from 0.1 to 0.3
-        delayChildren: 0.2, // Added delay before children start animating
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
       },
     },
   };
 
   return (
     <>
-      <div className="faq-wrapper ">
+      <div className="faq-wrapper">
         <div className="divider"></div>
 
         <div className="container">
@@ -57,23 +59,29 @@ const FaqArea = ({ style_2 }: any) => {
               viewport={{ once: true }}
               variants={staggerContainer}
             >
-              <div className="faq-accordion ps-lg-4">
+              {/* Accordion Section Starts Here */}
+              <motion.div
+                className="mission-vision-accordion"
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                variants={fadeInUp}
+                transition={{ delay: 1.2 }} // Adjust transition delay
+              >
                 <div className="accordion" id="faqAccordion">
                   {[1, 2, 3, 4, 5].map((num) => (
-                    <motion.div
-                      key={num}
-                      className="accordion-item"
-                      variants={fadeInUp}
-                      custom={num}
-                    >
+                    <div key={num} className="accordion-item">
                       <h2 className="accordion-header">
                         <button
-                          className="accordion-button"
+                          className={`accordion-button ${
+                            activeIndex === num ? "" : "collapsed"
+                          }`}
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target={`#faqQuestion${num}`}
-                          aria-expanded={num === 1}
+                          aria-expanded={activeIndex === num ? "true" : "false"}
                           aria-controls={`faqQuestion${num}`}
+                          onClick={() => setActiveIndex(num)} // Set active index when clicked
                         >
                           {num === 1
                             ? "What is vision for the future?"
@@ -89,19 +97,21 @@ const FaqArea = ({ style_2 }: any) => {
                       <div
                         id={`faqQuestion${num}`}
                         className={`accordion-collapse collapse ${
-                          num === 1 ? "show" : ""
+                          activeIndex === num ? "show" : ""
                         }`}
                         data-bs-parent="#faqAccordion"
                       >
-                        <div className="accordion-body pt-0">
+                        <div className="accordion-body">
                           A business consultant is a professional who provides
-                          expert advice and guidance on various aspects such.
+                          expert advice and guidance on various aspects such as
+                          strategy, management, and operations.
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
+              {/* Accordion Section Ends Here */}
             </motion.div>
           </div>
         </div>

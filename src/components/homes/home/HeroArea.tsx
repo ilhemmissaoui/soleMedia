@@ -5,7 +5,15 @@ import Link from "next/link";
 
 const HeroArea = () => {
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper2">
+      {/* Animated Gradient Background with Geometric Strip Effect */}
+      <motion.div
+        className="animated-background"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      />
+
       <motion.div
         className="divider"
         initial={{ opacity: 0 }}

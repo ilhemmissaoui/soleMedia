@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /service
+Allow: /portfolio
+Allow: //about-us
+Allow: /contact
+Allow: /blog
+Allow: /tiktok-agency
+
+# Sitemaps
+Sitemap: https://soledigitalmedia.com/sitemap.xml
+
+# Host
+Host: https://soledigitalmedia.com
+
+# Crawl-delay
+Crawl-delay: 10

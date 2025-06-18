@@ -54,14 +54,14 @@ const MissionArea = () => {
 
             <div className="col-12 col-lg-6">
               <div className="mission-vision-content">
-                <motion.h3
+                <motion.h1
                   initial="initial"
                   whileInView="animate"
                   viewport={{ once: true }}
                   variants={fadeInUp}
                 >
-                  <h3 style={{ color: "#ff971e" }}>Sole Digital Media</h3>
-                </motion.h3>
+                  <h1 style={{ color: "#ff971e" }}>Sole Digital Media</h1>
+                </motion.h1>
                 <motion.h4
                   initial="initial"
                   whileInView="animate"
@@ -69,7 +69,7 @@ const MissionArea = () => {
                   variants={fadeInUp}
                   transition={{ delay: 0.4 }} // Increased from 0.2
                 >
-                  Our services will help you provide the best solutionso that
+                  Our services will help you provide the best solution so that
                   your business can runsmoothly.
                 </motion.h4>
                 <motion.p

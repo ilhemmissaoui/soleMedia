@@ -3,8 +3,13 @@ import Wrapper from "@/layouts/Wrapper";
 import React from "react";
 
 export const metadata = {
-  title: "404 Error || Vorix - Creative Digital Agency Next js Template",
-  description: "Vorix - Creative Digital Agency HTML Template",
+  title:
+    "404 Error ||Sole Digital Media - Creative Digital Agency for Branding & Web Solutions",
+  description:
+    "Sole Digital Media -  Creative Digital Agency for Branding & Web Solutions",
+  icons: {
+    icon: "/src/app/favicon.ico",
+  },
 };
 
 const NotFoundPage = () => {

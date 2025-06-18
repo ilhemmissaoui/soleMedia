@@ -1,6 +1,6 @@
 /* ---------------------
    [Master Stylesheet]
-   Template Name: soleDigital - Creative Digital Agency HTML Template
+   Template Name: SoleDigital is a creative digital agency specializing in branding, web design, and digital marketing solutions to help your business grow and stand out online.
    Version: 1.0.0
 --------------------- */
 /* ---------------------
@@ -801,11 +801,19 @@ picture.jarallax-img img {
   position: relative;
   width: 100%;
 }
-.header-area .navbar-nav li.soleDigital-dd .soleDigital-dd .soleDigital-dd-menu {
+.header-area
+  .navbar-nav
+  li.soleDigital-dd
+  .soleDigital-dd
+  .soleDigital-dd-menu {
   display: none;
 }
 @media only screen and (min-width: 992px) {
-  .header-area .navbar-nav li.soleDigital-dd .soleDigital-dd .soleDigital-dd-menu {
+  .header-area
+    .navbar-nav
+    li.soleDigital-dd
+    .soleDigital-dd
+    .soleDigital-dd-menu {
     margin-left: 0.25rem;
     top: -8px;
     left: 100%;
@@ -815,8 +823,16 @@ picture.jarallax-img img {
   }
 }
 @media only screen and (min-width: 992px) {
-  .header-area .navbar-nav li.soleDigital-dd .soleDigital-dd:hover .soleDigital-dd-menu,
-  .header-area .navbar-nav li.soleDigital-dd .soleDigital-dd:focus .soleDigital-dd-menu {
+  .header-area
+    .navbar-nav
+    li.soleDigital-dd
+    .soleDigital-dd:hover
+    .soleDigital-dd-menu,
+  .header-area
+    .navbar-nav
+    li.soleDigital-dd
+    .soleDigital-dd:focus
+    .soleDigital-dd-menu {
     visibility: visible;
     opacity: 1;
   }
@@ -1102,6 +1118,16 @@ picture.jarallax-img img {
   }
 }
 
+
+
+.hero-wrapper2 {
+  margin-top: 68px;
+}
+@media only screen and (min-width: 992px) {
+  .hero-wrapper2 {
+    margin-top: 110px;
+  }
+}
 .hero-content h2 {
   font-weight: 700;
   letter-spacing: -3.6px;
@@ -1377,6 +1403,7 @@ picture.jarallax-img img {
 }
 
 /* Service */
+/* Service */
 .latest-service-wrapper {
   overflow: hidden;
 }
@@ -1393,70 +1420,84 @@ picture.jarallax-img img {
 .service-slide-card {
   position: relative;
   border-radius: 20px;
-  border: 1px solid rgba(254, 254, 254, 0.2); 
-   background: #1a1a1a; 
+  background: linear-gradient(135deg, #ff971e, #fcbf49);
   padding: 50px 36px;
   overflow: hidden;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  transition: all 500ms ease;
   height: 450px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fa0909;
 }
+
+.service-slide-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
 .service-slide-card i,
 .service-slide-card span {
   color: #c8c8cd;
   font-size: 80px;
   margin-bottom: 80px;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  transition: all 500ms ease;
+  transform: scale(1);
 }
+
+.service-slide-card:hover i,
+.service-slide-card:hover span {
+  color: #fff;
+  transform: scale(1.1);
+}
+
 .service-slide-card h2 {
-   color: #c8c8cd; 
+  color: #c8c8cd;
   font-size: 24px;
   letter-spacing: -0.48px;
   margin-bottom: 12px !important;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
   position: absolute;
   left: 36px;
   right: 36px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
   bottom: 50px;
   z-index: 1;
-}
-.service-slide-card p {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  position: absolute;
-  left: 36px;
-  right: 36px;
-  -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  bottom: -250px;
-  z-index: 1;
   opacity: 0;
   visibility: hidden;
 }
 
-/* rk-theme css start */
-.service-title {
+.service-slide-card p {
   position: absolute;
-  bottom: 0;
-  transition: bottom 0.3s ease;
+  left: 36px;
+  right: 36px;
+  bottom: -250px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s linear;
 }
 
-.service-description {
-  position: absolute;
-  bottom: 0;
-  transition: bottom 0.3s ease;
+.service-slide-card.active h2,
+.service-slide-card.active p {
+  opacity: 1;
+  visibility: visible;
 }
 
-.service-slide-card.active .service-title {
+.service-slide-card.active h2 {
   bottom: 140px;
 }
 
-.service-slide-card.active .service-description {
+.service-slide-card.active p {
   bottom: 45px;
+}
+
+.service-slide-card:hover h2,
+.service-slide-card:hover p {
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+}
+
+.service-slide-card:hover p {
+  bottom: 50px;
 }
 
 /* Responsive adjustments */
@@ -1500,168 +1541,125 @@ picture.jarallax-img img {
   }
 }
 
-/* rk-theme css end */
-
 .service-slide-card:hover,
 .service-slide-card:focus {
   background-color: #ff971e;
-  border-color: #ff971e; 
+  border-color: #ff971e;
 }
+
 .service-slide-card:hover h2,
 .service-slide-card:focus h2 {
   color: #0e0e0e;
 }
+
 .service-slide-card:hover p,
 .service-slide-card:focus p {
   opacity: 1;
   visibility: visible;
-  color: #1a1a1a; 
+  color: #1a1a1a;
   bottom: 50px;
 }
+
 .service-slide-card:hover i,
 .service-slide-card:hover span,
 .service-slide-card:focus i,
 .service-slide-card:focus span {
- color: #0e0e0e;
+  color: #0e0e0e;
 }
 
+/* Service navigation */
 .service-swiper-navigation {
   position: relative;
   z-index: 150;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 24px;
 }
+
 @media only screen and (min-width: 576px) {
   .service-swiper-navigation {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
+
 .service-swiper-navigation > div {
   position: relative;
   z-index: 1;
   width: 60px;
   height: 60px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
   background-color: #fefefe;
   border-radius: 50%;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition: all 500ms ease;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
+
 @media only screen and (min-width: 992px) {
   .service-swiper-navigation > div {
     width: 74px;
     height: 74px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 74px;
-    flex: 0 0 74px;
   }
 }
-.service-swiper-navigation > div::before {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #fbbe79;
-  content: "";
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -10;
-  -webkit-transition-duration: 400ms;
-  transition-duration: 400ms;
-  opacity: 0;
-}
+
 .service-swiper-navigation > div:hover,
 .service-swiper-navigation > div:focus {
   background-color: #ff971e;
 }
-.service-swiper-navigation > div:hover::before,
-.service-swiper-navigation > div:focus::before {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
 
 .service-two-swiper .swiper-slide {
   border-radius: 20px;
-  border: 1px solid rgba(254, 254, 254, 0.2);
   background: #1a1a1a;
   padding: 40px 30px;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 @media only screen and (min-width: 992px) {
   .service-two-swiper .swiper-slide {
     padding: 50px 36px;
   }
 }
+
 .service-two-swiper .swiper-slide .icon-wrapper {
-  margin-left: auto;
-  margin-right: auto;
   width: 100px;
   height: 100px;
   background-color: rgba(236, 200, 11, 0.3);
   border-radius: 50%;
   margin-bottom: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
+
 .service-two-swiper .swiper-slide h2 {
   color: #ffffff;
   font-size: 24px;
   letter-spacing: -0.48px;
 }
 
+/* Pagination styling */
 .swiper-pagination-2 {
   margin-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   gap: 12px;
 }
+
 .swiper-pagination-2 > span {
   width: 10px;
   height: 10px;
   border: 1px solid #fefefe;
   background-color: transparent;
   opacity: 1;
-  -webkit-transition: all 400ms;
   transition: all 400ms;
 }
+
 .swiper-pagination-2 > span.swiper-pagination-bullet-active {
   background-color: #fefefe;
 }
+
 
 .service-details-content,
 .blog-details-content {
@@ -4544,11 +4542,17 @@ form .btn {
   border-radius: 20px;
   border: 1px solid rgba(254, 254, 254, 0.2);
   padding: 50px 36px;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ff971e, #fcbf49); /* Gradient background */
   color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  position: relative;
+  overflow: hidden;
+    min-height: 300px;
+
 }
 
+/* Title and Content Color */
 .process-card-two h4,
 .process-card-two h2,
 .process-card-two p,
@@ -4557,10 +4561,13 @@ form .btn {
   transition: color 0.3s ease;
 }
 
+/* Hover Effects */
 .process-card-two:hover {
   background-color: #ff971e;
   border-color: #ff971e;
   color: #ffffff;
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .process-card-two:hover h4,
@@ -4570,6 +4577,11 @@ form .btn {
   color: #ffffff;
 }
 
+.process-card-two:hover .icon {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Light Mode Styles */
 .light-mode .process-card-two {
   border-color: rgba(26, 26, 26, 0.2);
   background-color: #ffffff;
@@ -4594,6 +4606,85 @@ form .btn {
 .light-mode .process-card-two:hover p,
 .light-mode .process-card-two:hover li {
   color: #ffffff;
+}
+
+/* Add subtle animation for icon scaling on hover */
+.process-card-two .icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add animated background on hover */
+.process-card-two::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 151, 30, 0.2), transparent);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.process-card-two:hover::after {
+  opacity: 1; /* Show the background animation on hover */
+}
+
+/* Card Icon Style */
+.process-card-two .icon {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  color: #ff971e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Hover Effect */
+.process-card-two .icon:hover {
+  background-color: #ff971e;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Hover Effect for Card Text */
+.process-card-two h4:hover,
+.process-card-two h2:hover {
+  text-decoration: underline;
+  color: #fcbf49;
+}
+
+/* Card Content Styling */
+.process-card-two p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .process-card-two {
+    padding: 30px 20px;
+  }
+
+  .process-card-two .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .process-card-two h4 {
+    font-size: 20px;
+  }
+
+  .process-card-two p {
+    font-size: 14px;
+  }
 }
 /* Award */
 .award-card-container {
@@ -5625,14 +5716,27 @@ form .btn {
 .light-mode .right-side-soleDigital-offcanvas .offcanvas-body p {
   color: #0e0e0e;
 }
-.light-mode .right-side-soleDigital-offcanvas .offcanvas-body .contact-info > div p {
+.light-mode
+  .right-side-soleDigital-offcanvas
+  .offcanvas-body
+  .contact-info
+  > div
+  p {
   color: #0e0e0e;
 }
 .light-mode .right-side-soleDigital-offcanvas .offcanvas-body .social-nav a {
   background-color: #fefefe;
 }
-.light-mode .right-side-soleDigital-offcanvas .offcanvas-body .social-nav a:hover,
-.light-mode .right-side-soleDigital-offcanvas .offcanvas-body .social-nav a:focus {
+.light-mode
+  .right-side-soleDigital-offcanvas
+  .offcanvas-body
+  .social-nav
+  a:hover,
+.light-mode
+  .right-side-soleDigital-offcanvas
+  .offcanvas-body
+  .social-nav
+  a:focus {
   background-color: #ff971e;
 }
 .light-mode
@@ -5883,7 +5987,6 @@ form .btn {
   background: #fefefe;
 }
 
-
 .aboutUsWrapper {
   overflow: hidden;
   padding: 100px 0;
@@ -5895,7 +5998,11 @@ form .btn {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(2, 163, 171, 0.05) 0%, rgba(255, 151, 30, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(2, 163, 171, 0.05) 0%,
+    rgba(255, 151, 30, 0.05) 100%
+  );
   z-index: -1;
 }
 
@@ -5910,9 +6017,15 @@ form .btn {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .experienceBadge {
@@ -6009,3 +6122,122 @@ form .btn {
 .light-mode .info-box h4 {
   color: #ff971e;
 }
+
+
+/* Hero Area */
+/* Hero Area */
+.hero-wrapper2 {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Simplified Animated Background */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ff971e 30%, transparent 30%);
+  background-size: 150% 100%;
+  animation: fadeEffect 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Subtle Fade Effect */
+@keyframes fadeEffect {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Container, Content, and Subtitle Styles */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .hero-wrapper2 {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+} */
+
+/* Simple Animated Gradient Background with Geometric Strip Effect */
+/* .animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ff971e 50%, transparent 50%);
+  background-size: 200% 100%;
+  animation: stripEffect 8s ease-in-out infinite;
+  z-index: -1;
+} */
+
+/* Animated Strip Effect */
+/* @keyframes stripEffect {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+} */
+
+/* Divider and other existing styles */
+
+
+/* .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #fff;
+} */
