@@ -7,8 +7,6 @@ const AboutTikTok = () => {
   return (
     <>
       <div className="about-us-wrapper">
-        <div className="divider"></div>
-
         <div className="container">
           <motion.div
             className="row g-4 g-xl-5 align-items-center"

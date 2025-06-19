@@ -1,8 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: 'export', // Add this line to enable static exports
-  /* other config options here */
+// next.config.js
+const nextConfig = {
+  output: "export", // this is fine
+  images: {
+    unoptimized: true, // <-- disable built-in image optimization
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

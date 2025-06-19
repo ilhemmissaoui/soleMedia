@@ -9,18 +9,22 @@ import ProcessArea from "../homes/home-2/ProcessArea";
 import BlogArea from "../homes/home-2/BlogArea";
 import CategoryArea from "../homes/home-2/CategoryArea";
 import ProjectArea from "../homes/home-2/ProjectArea";
+import TeamArea from "../homes/home-2/TeamArea";
+import AboutService from "./AboutService";
 
 const Service = () => {
   return (
     <>
       <HeaderOne />
       <Breacrumb title="Services" subtitle="Services" />
+      <AboutService/>
       <ServiceArea />
-      <CategoryArea />
+      <ServiceAbout />
+      {/* <CategoryArea /> */}
 
       {/* <ServiceAbout /> */}
       {/* <PriceArea style_2={true} /> */}
-      <ProcessArea />
+      <TeamArea />
       {/* <BlogArea /> */}
       <ProjectArea />
 

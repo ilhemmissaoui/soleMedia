@@ -1424,9 +1424,9 @@ picture.jarallax-img img {
   padding: 50px 36px;
   overflow: hidden;
   transition: all 500ms ease;
-  height: 450px;
+  height: 430px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  background-color: #fa0909;
+  background-color: #fa9e09;
 }
 
 .service-slide-card:hover {
@@ -4578,9 +4578,10 @@ form .btn {
 }
 
 .process-card-two:hover .icon {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  background-color: #ff971e;
+  color: #ffffff;
+  transform: scale(1.1);
 }
-
 /* Light Mode Styles */
 .light-mode .process-card-two {
   border-color: rgba(26, 26, 26, 0.2);
@@ -6241,3 +6242,61 @@ form .btn {
   font-size: 1.25rem;
   color: #fff;
 } */
+
+
+/* Core Wrapper */
+.about-us-wrapper {
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Main Section Block */
+.about-service-section {
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+  margin: 3rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styling */
+.light-mode .about-service-section {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .about-service-section h1 {
+  color: #ff971e;
+}
+
+.light-mode .about-service-section p {
+  color: #666666;
+}
+
+/* Dark Mode Styling */
+.dark-mode .about-service-section {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .about-service-section h1 {
+  color: #ff971e;
+}
+
+.dark-mode .about-service-section p {
+  color: #cccccc;
+}
+
+/* Image Box */
+.about-service-image {
+  width: 100%;
+  height: 300px;
+  background-image: url('/assets/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 160px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

@@ -7,8 +7,13 @@ const Breacrumb = ({
   subtitle = "Creator Network",
 }: any) => {
   return (
-    <section className="hero-wrapper">
-      <div className="divider"></div>
+    <section className="hero-wrapper2">
+      <motion.div
+        className="animated-background"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      />
 
       <div className="container">
         <div className="row">

@@ -1,15 +1,21 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
+import dynamic from "next/dynamic";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
-export const services = [
+import "swiper/css";
+import "swiper/css/navigation";
+
+const services = [
   {
     id: "1",
     icon: "campaign",
     title: "Digital Marketing",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "assets/img/digital-marketing.jpg",
     link: "/service/digital-marketing",
   },
   {
@@ -18,7 +24,6 @@ export const services = [
     title: "Web Development",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "assets/img/webDev.jpg",
     link: "/service/web-development",
   },
   {
@@ -27,7 +32,6 @@ export const services = [
     title: "Content creation",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "assets/img/mobileApp.jpg",
     link: "/service/content-creation",
   },
   {
@@ -36,7 +40,6 @@ export const services = [
     title: "UI/UX Design",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "assets/img/ux.jpg",
     link: "/service/graphic-design",
   },
   {
@@ -45,7 +48,6 @@ export const services = [
     title: "SEO optimization",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "assets/img/digital-marketing.jpg",
     link: "/service/seo-optimization",
   },
   {
@@ -54,16 +56,14 @@ export const services = [
     title: "Social media management",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "/assets/img/med1.jpg",
     link: "/service/social-media-management",
   },
   {
     id: "7",
     icon: "videocam",
-    title: "video production",
+    title: "Video production",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "/assets/img/video1.jpg",
     link: "/service/video-production",
   },
   {
@@ -72,88 +72,88 @@ export const services = [
     title: "Influencers marketing",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    bgImage: "/assets/img/inf1.jpg",
     link: "/service/influencers-marketing",
   },
 ];
 
 const ServiceArea = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   return (
-    <>
-      <div className="service-wrapper">
-        <div className="divider"></div>
+    <div className="service-wrapper bg-secondary">
+      <div className="divider"></div>
 
-        <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="display-6 fw-bold mb-3" style={{ color: "#ff971e" }}>
-              Our Services
-            </h2>
-            <p>
-              We deliver end-to-end digital solutions designed to elevate your
-              business, drive growth, and ensure lasting success in today&apos;s
-              dynamic digital landscape.
-            </p>
+      <div className="container">
+        <motion.div
+          className="row g-5 align-items-end justify-content-between"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="col-12 col-md-6 col-lg-5">
+            <div className="section-heading">
+              <h2 className="mb-0">Our Services</h2>
+            </div>
           </div>
+        </motion.div>
 
-          <div className="row g-4 g-lg-5">
-            {services.map((item, i) => (
-              <div key={i} className="col-12 col-md-6 col-xl-4">
-                <Link href={item.link}>
-                  <div
-                    onMouseEnter={() => setActiveIndex(i)}
-                    onMouseLeave={() => setActiveIndex(null)}
-                    className={`service-slide-card ${
-                      activeIndex === i ? "active" : ""
-                    }`}
-                    style={{
-                      backgroundImage:
-                        activeIndex === i
-                          ? "none"
-                          : `linear-gradient(rgba(69, 69, 69, 0.7), rgba(70, 70, 70, 0.7)), url(${item.bgImage})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundColor:
-                        activeIndex === i ? "#ff971e" : "transparent",
-                    }}
-                  >
-                    <span
-                      className="material-symbols-outlined"
-                      style={{
-                        color: "white",
-                      }}
-                    >
-                      {item.icon}
-                    </span>
-                    <h2
-                      style={{
-                        bottom: `${activeIndex === i ? "140px" : ""}`,
-                        color: "white",
-                      }}
-                    >
-                      {item.title}
-                    </h2>
-                    <p
-                      className="mb-0"
-                      style={{
-                        bottom: `${activeIndex === i ? "45px" : ""}`,
-                        color: "white",
-                      }}
-                    >
-                      {item.description}
-                    </p>
-                  </div>
-                </Link>
-              </div>
+        <motion.div
+          className="container"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Swiper
+            loop={true}
+            slidesPerView={3}
+            spaceBetween={30}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              nextEl: ".portfolio-button-next",
+              prevEl: ".portfolio-button-prev",
+            }}
+            modules={[Navigation, Autoplay]}
+            breakpoints={{
+              320: { slidesPerView: 1, spaceBetween: 10 },
+              480: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1200: { slidesPerView: 3, spaceBetween: 30 },
+            }}
+            className="swiper portfolio-swiper"
+          >
+            {services.map((item, index) => (
+              <SwiperSlide
+                className="swiper-slide"
+                style={{ height: "580px", paddingTop: "30px" }}
+                key={item.id}
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Link href={item.link}>
+                    <div className="service-slide-card">
+                      <span className="material-symbols-outlined mb-3">
+                        {item.icon}
+                      </span>
+                      <h3>{item.title}</h3>
+                      <p className="mb-0">{item.description}</p>
+                    </div>
+                  </Link>
+                </motion.div>
+              </SwiperSlide>
             ))}
-          </div>
-        </div>
-
-        <div className="divider"></div>
+          </Swiper>
+        </motion.div>
       </div>
-    </>
+      <div className="divider-sm"></div>
+    </div>
   );
 };
 
-export default ServiceArea;
+export default dynamic(() => Promise.resolve(ServiceArea), { ssr: false });

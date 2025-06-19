@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
+import "swiper/css";
+import "swiper/css/pagination";
 // Service data
 const services = [
   {
@@ -93,29 +96,32 @@ const MAX_LINES = 3;
 const LINE_HEIGHT = 20;
 const MAX_HEIGHT = MAX_LINES * LINE_HEIGHT;
 
-const ServiceItem = ({
-  title,
-  description,
-  iconPath,
-  clipId,
-}: {
+type ServiceItemProps = {
   title: string;
   description: string;
   iconPath: string;
   clipId: string;
-}) => {
+};
+
+const ServiceItem = ({ title, description, iconPath, clipId }: ServiceItemProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showMore, setShowMore] = useState(false);
-  const descriptionRef = React.useRef<HTMLParagraphElement>(null);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (descriptionRef.current) {
       setShowMore(descriptionRef.current.scrollHeight > MAX_HEIGHT);
     }
   }, [description]);
 
   return (
-    <div className="service-item">
+    <motion.div
+      className="service-item"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <Link href="/service">
         <div className="icon-wrapper">
           <svg
@@ -170,62 +176,65 @@ const ServiceItem = ({
           </span>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const ServiceArea = () => {
   return (
-    <>
-      <div className="latest-service-wrapper bg-secondary">
-        <div className="divider"></div>
+    <div className="latest-service-wrapper bg-secondary">
+      <div className="divider"></div>
 
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="section-heading text-center">
-                <h2 className="mb-0">Our services</h2>
-              </div>
+      <div className="container">
+        <motion.div
+          className="row justify-content-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="col-lg-6">
+            <div className="section-heading text-center">
+              <h2 className="mb-0">Our services</h2>
             </div>
           </div>
-        </div>
-
-        <div className="divider-sm"></div>
-
-        <div className="container">
-          <Swiper
-            loop={true}
-            slidesPerView={3}
-            spaceBetween={30}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              el: ".swiper-pagination-2",
-            }}
-            modules={[Pagination, Autoplay]}
-            breakpoints={{
-              320: { slidesPerView: 1, spaceBetween: 10 },
-              480: { slidesPerView: 1, spaceBetween: 20 },
-              768: { slidesPerView: 2, spaceBetween: 20 },
-              1200: { slidesPerView: 3, spaceBetween: 30 },
-            }}
-            className="swiper service-two-swiper"
-          >
-            {services.map((service) => (
-              <SwiperSlide key={service.id} className="swiper-slide">
-                <ServiceItem {...service} />
-              </SwiperSlide>
-            ))}
-
-            <div className="swiper-pagination-2"></div>
-          </Swiper>
-        </div>
-
-        <div className="divider"></div>
+        </motion.div>
       </div>
-    </>
+
+      <div className="divider-sm"></div>
+
+      <div className="container">
+        <Swiper
+          loop={true}
+          slidesPerView={3}
+          spaceBetween={30}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            el: ".swiper-pagination-2",
+          }}
+          modules={[Pagination, Autoplay]}
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            1200: { slidesPerView: 3, spaceBetween: 30 },
+          }}
+          className="swiper service-two-swiper"
+        >
+          {services.map((service) => (
+            <SwiperSlide key={service.id} className="swiper-slide">
+              <ServiceItem {...service} />
+            </SwiperSlide>
+          ))}
+          <div className="swiper-pagination-2"></div>
+        </Swiper>
+      </div>
+
+      <div className="divider"></div>
+    </div>
   );
 };
 

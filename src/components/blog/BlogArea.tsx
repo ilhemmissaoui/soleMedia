@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const BlogArea = () => {
   const blogPosts = [
@@ -40,7 +41,13 @@ const BlogArea = () => {
         <div className="divider"></div>
 
         <div className="container">
-          <div className="text-center mb-5">
+          <motion.div
+            className="text-center mb-5"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="display-6 fw-bold mb-3" style={{ color: "#ff971e" }}>
               Our Blog Post
             </h2>
@@ -54,11 +61,17 @@ const BlogArea = () => {
               content creation, we cover a wide range of topics to support your
               digital growth journey.
             </p>
-          </div>
+          </motion.div>
 
           <div className="divider"></div>
 
-          <div className="row g-4 align-items-end justify-content-between">
+          <motion.div
+            className="row g-4 align-items-end justify-content-between"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="col-12 col-md-6 col-lg-5">
               <div className="section-heading">
                 <h2 className="mb-0">Let's See Our Blogs</h2>
@@ -73,13 +86,26 @@ const BlogArea = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div className="divider-sm"></div>
 
-          <div className="row g-4 g-xl-5">
-            {blogPosts.map((post) => (
-              <div key={post.id} className="col-md-6">
+          <motion.div
+            className="row g-4 g-xl-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ staggerChildren: 0.2 }}
+          >
+            {blogPosts.map((post, index) => (
+              <motion.div
+                key={post.id}
+                className="col-md-6"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <div className="portfolio-card">
                   <img src={post.img} alt={post.title} />
 
@@ -95,9 +121,9 @@ const BlogArea = () => {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="divider"></div>
