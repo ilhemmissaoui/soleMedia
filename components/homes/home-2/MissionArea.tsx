@@ -71,7 +71,7 @@ const MissionArea = () => {
                   transition={{ delay: 0.4 }} // Increased from 0.2
                 >
                   Our services will help you provide the best solution so that
-                  your business can runsmoothly.
+                  your business can Run Smoothly.
                 </motion.h4>
                 <motion.p
                   className="mb-4"

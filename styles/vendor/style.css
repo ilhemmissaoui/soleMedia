@@ -2320,7 +2320,7 @@ picture.jarallax-img img {
   z-index: 1;
   width: 60px;
   height: 60px;
-  background-color: #fefefe;
+  background-color: #ff971e;
   border-radius: 50%;
   -webkit-transition: all 500ms;
   transition: all 500ms;
@@ -2750,7 +2750,7 @@ form .btn {
   flex: 0 0 50px;
   border-radius: 50%;
   height: 50px;
-  background-color: #ffffff;
+  background-color: #ff971e;
   right: auto;
   left: auto;
   -webkit-transition-duration: 400ms;

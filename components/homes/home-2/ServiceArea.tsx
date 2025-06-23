@@ -47,7 +47,7 @@ const services = [
   },
   {
     id: 5,
-    title: "SEO Otimization",
+    title: "SEO Optimization",
     description:
       "Your online presence with our tailored SEO solutions. From keyword research to on-page optimization and link-building strategies, we help you climb search engine rankings and attract organic traffic.",
     iconPath:
@@ -103,7 +103,12 @@ type ServiceItemProps = {
   clipId: string;
 };
 
-const ServiceItem = ({ title, description, iconPath, clipId }: ServiceItemProps) => {
+const ServiceItem = ({
+  title,
+  description,
+  iconPath,
+  clipId,
+}: ServiceItemProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const descriptionRef = useRef<HTMLParagraphElement>(null);

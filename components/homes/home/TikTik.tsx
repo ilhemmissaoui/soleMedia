@@ -77,7 +77,7 @@ const TikTok = () => {
                 </div>
                 <h6 className="mb-0">
                   Our services will help you provide the best solutionso that
-                  your business can runsmoothly.
+                  your business can Run Smoothly.
                 </h6>
                 <p>
                   Sole Digital Media is a full-service digital marketing and

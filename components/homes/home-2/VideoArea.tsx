@@ -12,17 +12,17 @@ const counter_data = [
   {
     label: "Competitive Rates",
     description:
-      "Benefit from competitive rates with One Digital Media's expert strategies. Increase your online presence and attract more customers in the MENA region without breaking your budget.",
+      "Benefit from competitive rates with Sole Digital  Media's expert strategies. Increase your online presence and attract more customers in the MENA region without breaking your budget.",
   },
   {
     label: "Premium Development",
     description:
-      "Experience premium development services with One Digital Media. We deliver tailored solutions for robust websites and applications, ensuring top-notch performance and user satisfaction in the MENA market.",
+      "Experience premium development services with Sole Digital Media We deliver tailored solutions for robust websites and applications, ensuring top-notch performance and user satisfaction in the MENA market.",
   },
   {
     label: "No Contracts Needed",
     description:
-      "At One Digital Media, enjoy services without the hassle of contracts. Benefit from flexible solutions tailored for the MENA region, ensuring convenience and peace of mind for your business.",
+      "At Sole Digital  Media, enjoy services without the hassle of contracts. Benefit from flexible solutions tailored for the MENA region, ensuring convenience and peace of mind for your business.",
   },
 ];
 
@@ -37,25 +37,34 @@ const VideoArea: React.FC<VideoAreaProps> = ({ style_2 }) => {
         });
       });
 
-      const videoPopup = document.getElementById("videoPopup") as HTMLDivElement | null;
-      const videoFrame = document.getElementById("videoFrame") as HTMLIFrameElement | null;
-      const closeBtn = document.getElementById("videoCloseButton") as HTMLSpanElement | null;
+      const videoPopup = document.getElementById(
+        "videoPopup"
+      ) as HTMLDivElement | null;
+      const videoFrame = document.getElementById(
+        "videoFrame"
+      ) as HTMLIFrameElement | null;
+      const closeBtn = document.getElementById(
+        "videoCloseButton"
+      ) as HTMLSpanElement | null;
 
       if (videoPopup && videoFrame && closeBtn) {
         const openHandler = (event: Event) => {
           const target = event.currentTarget as HTMLElement;
           const videoUrl = target.getAttribute("data-video");
           if (videoUrl) {
-            const updatedUrl = videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be") || videoUrl.includes("vimeo.com")
-              ? `${videoUrl}?autoplay=1`
-              : videoUrl;
+            const updatedUrl =
+              videoUrl.includes("youtube.com") ||
+              videoUrl.includes("youtu.be") ||
+              videoUrl.includes("vimeo.com")
+                ? `${videoUrl}?autoplay=1`
+                : videoUrl;
             videoFrame.src = updatedUrl;
             videoPopup.style.display = "flex";
           }
         };
 
         const buttons = document.querySelectorAll<HTMLElement>(".video-btn");
-        buttons.forEach(btn => btn.addEventListener("click", openHandler));
+        buttons.forEach((btn) => btn.addEventListener("click", openHandler));
 
         closePopup = () => {
           if (videoPopup && videoFrame) {
@@ -70,7 +79,9 @@ const VideoArea: React.FC<VideoAreaProps> = ({ style_2 }) => {
         });
 
         return () => {
-          buttons.forEach(btn => btn.removeEventListener("click", openHandler));
+          buttons.forEach((btn) =>
+            btn.removeEventListener("click", openHandler)
+          );
           window.removeEventListener("click", () => {});
         };
       }
@@ -88,7 +99,11 @@ const VideoArea: React.FC<VideoAreaProps> = ({ style_2 }) => {
           style={{ zIndex: "9999" }}
         >
           <div className="video-content">
-            <span className="close-btn" id="videoCloseButton" aria-label="Close video popup">
+            <span
+              className="close-btn"
+              id="videoCloseButton"
+              aria-label="Close video popup"
+            >
               &times;
             </span>
             <div className="ratio ratio-16x9">
