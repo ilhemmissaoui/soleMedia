@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import "jarallax/dist/jarallax.css";
 import { motion } from "framer-motion";
 
+type VideoAreaProps = {
+  style_2?: boolean;
+};
+
 const counter_data = [
   {
     label: "Competitive Rates",
@@ -22,61 +26,52 @@ const counter_data = [
   },
 ];
 
-const VideoArea = ({ style_2 }: any) => {
+const VideoArea: React.FC<VideoAreaProps> = ({ style_2 }) => {
   useEffect(() => {
+    let closePopup: (() => void) | undefined;
+
     if (typeof window !== "undefined") {
-      // Importing jarallax dynamically
       import("jarallax").then(({ jarallax }) => {
         jarallax(document.querySelectorAll<HTMLElement>(".jarallax"), {
           speed: 0.6,
         });
       });
 
-      // Video popup logic
-      const videoPopup = document.getElementById(
-        "videoPopup"
-      ) as HTMLDivElement | null;
-      const videoFrame = document.getElementById(
-        "videoFrame"
-      ) as HTMLIFrameElement | null;
-      const closeBtn = document.getElementById(
-        "videoCloseButton"
-      ) as HTMLSpanElement | null;
+      const videoPopup = document.getElementById("videoPopup") as HTMLDivElement | null;
+      const videoFrame = document.getElementById("videoFrame") as HTMLIFrameElement | null;
+      const closeBtn = document.getElementById("videoCloseButton") as HTMLSpanElement | null;
 
       if (videoPopup && videoFrame && closeBtn) {
-        document
-          .querySelectorAll<HTMLElement>(".video-btn")
-          .forEach((button) => {
-            button.addEventListener("click", function () {
-              const videoUrl = (this as HTMLElement).getAttribute("data-video");
-              if (videoUrl) {
-                let updatedUrl = videoUrl;
-                if (
-                  videoUrl.includes("youtube.com") ||
-                  videoUrl.includes("youtu.be")
-                ) {
-                  updatedUrl += "?autoplay=1";
-                } else if (videoUrl.includes("vimeo.com")) {
-                  updatedUrl += "?autoplay=1";
-                }
-                videoFrame.src = updatedUrl;
-                videoPopup.style.display = "flex";
-              }
-            });
-          });
-
-        // Close button functionality
-        closeBtn.onclick = () => {
-          videoPopup.style.display = "none";
-          videoFrame.src = "";
+        const openHandler = (event: Event) => {
+          const target = event.currentTarget as HTMLElement;
+          const videoUrl = target.getAttribute("data-video");
+          if (videoUrl) {
+            const updatedUrl = videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be") || videoUrl.includes("vimeo.com")
+              ? `${videoUrl}?autoplay=1`
+              : videoUrl;
+            videoFrame.src = updatedUrl;
+            videoPopup.style.display = "flex";
+          }
         };
 
-        // Clicking outside of the video popup closes it
-        window.onclick = (event: MouseEvent) => {
-          if (event.target === videoPopup) {
+        const buttons = document.querySelectorAll<HTMLElement>(".video-btn");
+        buttons.forEach(btn => btn.addEventListener("click", openHandler));
+
+        closePopup = () => {
+          if (videoPopup && videoFrame) {
             videoPopup.style.display = "none";
             videoFrame.src = "";
           }
+        };
+
+        closeBtn.onclick = closePopup;
+        window.addEventListener("click", (event: MouseEvent) => {
+          if (event.target === videoPopup) closePopup?.();
+        });
+
+        return () => {
+          buttons.forEach(btn => btn.removeEventListener("click", openHandler));
+          window.removeEventListener("click", () => {});
         };
       }
     }
@@ -84,30 +79,39 @@ const VideoArea = ({ style_2 }: any) => {
 
   return (
     <>
-      {style_2 ? null : (
+      {!style_2 && (
         <div
           id="videoPopup"
           className="video-popup-iframe"
+          role="dialog"
+          aria-modal="true"
           style={{ zIndex: "9999" }}
         >
           <div className="video-content">
-            <span className="close-btn" id="videoCloseButton">
+            <span className="close-btn" id="videoCloseButton" aria-label="Close video popup">
               &times;
             </span>
             <div className="ratio ratio-16x9">
-              <iframe id="videoFrame" allowFullScreen></iframe>
+              <iframe
+                id="videoFrame"
+                title="Promotional Video"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>
       )}
 
       <div className="cta-video-wrapper">
-        {style_2 ? <div className="divider"></div> : null}
+        {style_2 && <div className="divider"></div>}
+
         <div className="container">
-          {style_2 ? null : (
+          {!style_2 && (
             <div
               className="video-wrap"
               style={{ borderRadius: "20px", overflow: "hidden" }}
+              aria-label="Promotional background video"
             >
               <video
                 autoPlay
@@ -129,7 +133,7 @@ const VideoArea = ({ style_2 }: any) => {
             </div>
           )}
 
-          <div className="row g-4 g-lg-5">
+          <div className="row g-4 g-lg-5" aria-label="Service Highlights">
             {counter_data.map((item, i) => (
               <motion.div
                 key={i}

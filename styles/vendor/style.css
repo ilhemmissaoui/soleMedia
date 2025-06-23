@@ -3829,8 +3829,8 @@ form .btn {
 }
 .cta-wrapper .btn:hover,
 .cta-wrapper .btn:focus {
-  background-color: #ffffff;
-  border-color: #ffffff !important;
+  background-color: #fbbe79;
+  border-color: #000 !important;
 }
 
 .cta-content {

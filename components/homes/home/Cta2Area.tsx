@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Cta2Area = () => {
   return (
@@ -27,15 +29,29 @@ const Cta2Area = () => {
                 visual elements, offering comprehensive solutions for
                 businesses' design needs across graphic platforms.
               </p>
-              <a
-                href="/contact"
-                className="btn btn-primary wow fadeInUp"
-                data-wow-duration="1000ms"
-                data-wow-delay="1100ms"
+              <motion.div
+                className="text-center mt-4"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1.1, duration: 0.6 }}
               >
-                <span>CONTACT US</span>
-                <span>CONTACT US</span>
-              </a>
+                <Link href="/contact" className="btn btn-primary">
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.3 }}
+                  >
+                    CONTACT US
+                  </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.4 }}
+                  >
+                    CONTACT US
+                  </motion.span>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>

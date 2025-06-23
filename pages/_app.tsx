@@ -1,9 +1,9 @@
-import "../styles/index.css"; // ✅ Only here for global CSS
+import "../styles/index.css";
 
-import { AppProps } from "next/app";
-import Wrapper from "../layouts/Wrapper"; // If you want global layout applied to all pages
+import type { AppProps } from "next/app";
+import Wrapper from "../layouts/Wrapper";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Wrapper>
       <Component {...pageProps} />

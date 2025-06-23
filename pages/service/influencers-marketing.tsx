@@ -1,5 +1,5 @@
 import ServiceDetails from "../../components/service-details/influencers-marketing";
-import Wrapper from "....//layouts/Wrapper";
+import Wrapper from "../../layouts/Wrapper";
 
 export const metadata = {
   title:

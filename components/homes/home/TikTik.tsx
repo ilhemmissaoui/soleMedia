@@ -15,8 +15,9 @@ const TikTok = () => {
               <div className="about-us-thumbnail position-relative animate-float">
                 <img
                   src="/assets/img/about.jpg"
-                  alt=""
+                  alt="Team of Sole Digital Media agency"
                   className="main-image"
+                  loading="lazy"
                 />
                 <div className="experience-badge">
                   <span className="years">10+</span>

@@ -130,7 +130,7 @@ const HeroArea = () => {
                 </motion.p>
 
                 <motion.a
-                  href="#"
+                  href="/contact-us"
                   className="btn btn-primary"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}

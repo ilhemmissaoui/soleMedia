@@ -8,47 +8,48 @@ const VideoAreaHomeOne: React.FC = () => {
   const videoFrameRef = useRef<HTMLIFrameElement | null>(null);
 
   useEffect(() => {
-    const jarallaxElements =
-      document.querySelectorAll<HTMLElement>(".jarallax");
+    const handleButtonClick = (e: Event) => {
+      const target = e.currentTarget as HTMLElement;
+      const videoUrl = target.getAttribute("data-video");
+      if (videoUrl && videoPopupRef.current && videoFrameRef.current) {
+        const updatedUrl =
+          videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")
+            ? `${videoUrl}?autoplay=1`
+            : videoUrl.includes("vimeo.com")
+            ? `${videoUrl}?autoplay=1`
+            : videoUrl;
 
-    // Video Popup Logic
-    const videoPopup = videoPopupRef.current;
-    const videoFrame = videoFrameRef.current;
+        videoFrameRef.current.src = updatedUrl;
+        videoPopupRef.current.style.display = "flex";
+      }
+    };
 
-    if (videoPopup && videoFrame) {
-      document.querySelectorAll<HTMLElement>(".video-btn").forEach((button) => {
-        button.addEventListener("click", function () {
-          const videoUrl = (this as HTMLElement).getAttribute("data-video");
-          if (videoUrl) {
-            let updatedUrl =
-              videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")
-                ? `${videoUrl}?autoplay=1`
-                : videoUrl.includes("vimeo.com")
-                ? `${videoUrl}?autoplay=1`
-                : videoUrl;
+    const closeVideoPopup = () => {
+      if (videoPopupRef.current && videoFrameRef.current) {
+        videoPopupRef.current.style.display = "none";
+        videoFrameRef.current.src = "";
+      }
+    };
 
-            videoFrame.src = updatedUrl;
-            videoPopup.style.display = "flex";
-          }
-        });
-      });
+    const popupButtons = document.querySelectorAll<HTMLElement>(".video-btn");
+    popupButtons.forEach((btn) => btn.addEventListener("click", handleButtonClick));
 
-      const closeVideoPopup = () => {
-        videoPopup.style.display = "none";
-        videoFrame.src = ""; // Reset video
-      };
+    document
+      .getElementById("videoCloseButton")
+      ?.addEventListener("click", closeVideoPopup);
 
-      document
-        .getElementById("videoCloseButton")
-        ?.addEventListener("click", closeVideoPopup);
-      window.addEventListener("click", (event: MouseEvent) => {
-        if (event.target === videoPopup) closeVideoPopup();
-      });
+    const handleWindowClick = (event: MouseEvent) => {
+      if (event.target === videoPopupRef.current) {
+        closeVideoPopup();
+      }
+    };
 
-      return () => {
-        window.removeEventListener("click", closeVideoPopup);
-      };
-    }
+    window.addEventListener("click", handleWindowClick);
+
+    return () => {
+      popupButtons.forEach((btn) => btn.removeEventListener("click", handleButtonClick));
+      window.removeEventListener("click", handleWindowClick);
+    };
   }, []);
 
   return (
@@ -57,19 +58,25 @@ const VideoAreaHomeOne: React.FC = () => {
         className="jarallax mb-30"
         data-jarallax
         data-speed="0.6"
-        style={{ zIndex: "9999" }}
-        
+        style={{ zIndex: 9999 }}
       >
         {/* Video Popup */}
-        <div ref={videoPopupRef} id="videoPopup" className="video-popup-iframe">
+        <div
+          ref={videoPopupRef}
+          id="videoPopup"
+          className="video-popup-iframe"
+          aria-modal="true"
+          role="dialog"
+        >
           <div className="video-content">
-            <span className="close-btn" id="videoCloseButton">
+            <button className="close-btn" id="videoCloseButton" aria-label="Close Video">
               &times;
-            </span>
+            </button>
             <div className="ratio ratio-16x9">
               <iframe
                 ref={videoFrameRef}
                 id="videoFrame"
+                title="Sole Digital Media Video"
                 allowFullScreen
               ></iframe>
             </div>
@@ -79,7 +86,7 @@ const VideoAreaHomeOne: React.FC = () => {
 
       <div
         className="video-wrapper jarallax"
-        data-jarallax=""
+        data-jarallax
         data-speed="0.6"
         style={{
           backgroundImage: `url(/assets/img/about.jpg)`,
