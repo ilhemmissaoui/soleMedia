@@ -108,8 +108,7 @@ const TikTok = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Our services will help you provide the best solutions so that
-                your business can run smoothly.
+                Empowering TikTok LIVE Creators
               </motion.h6>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -117,13 +116,18 @@ const TikTok = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                Sole Digital Media is a full-service digital marketing and
-                creative agency dedicated to building impactful digital
-                experiences for businesses, creators, and organizations across
-                the globe. As a modern and agile agency, we combine strategic
-                thinking, innovative design, and cutting-edge technology to help
-                our clients grow, engage, and lead in an increasingly digital
-                world.
+                At Sole Digital Media, we proudly operate as an authorized
+                  TikTok LIVE Creator Network, dedicated to supporting and
+                  scaling livestream creators across the MENA region, USA, and
+                  Canada—all while strictly adhering to TikTok&apos;s Community
+                  Guidelines, LIVE policies, and ethical standards.
+                  <br /> Our mission is to empower creators by providing
+                  region-specific onboarding, localized content strategies, and
+                  tailored growth plans that respect cultural nuances and
+                  platform regulations in each market. Whether you are based in
+                  North America or the Middle East and North Africa, we deliver
+                  personalized support designed to maximize your TikTok LIVE
+                  visibility, engagement, and monetization.
               </motion.p>
 
               <motion.div

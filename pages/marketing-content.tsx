@@ -1,5 +1,5 @@
-import Service from "../../components/service";
-import Wrapper from "../../layouts/Wrapper";
+import BlogDetails from "../components/blog-details/marketing-content";
+import Wrapper from "../layouts/Wrapper";
 
 export const metadata = {
   title:
@@ -14,7 +14,7 @@ export const metadata = {
 const index = () => {
   return (
     <Wrapper>
-      <Service />
+      <BlogDetails />
     </Wrapper>
   );
 };

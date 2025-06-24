@@ -1,5 +1,5 @@
-import BlogDetails from "../../components/blog-details/branding-design";
-import Wrapper from "../../layouts/Wrapper";
+import BlogDetails from "../components/blog-details/branding-design";
+import Wrapper from "../layouts/Wrapper";
 
 export const metadata = {
   title:

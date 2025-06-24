@@ -16,7 +16,7 @@ const services = [
     title: "Digital Marketing",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/digital-marketing",
+    link: "/digital-marketing",
   },
   {
     id: "2",
@@ -24,7 +24,7 @@ const services = [
     title: "Web Development",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/web-development",
+    link: "/web-development",
   },
   {
     id: "3",
@@ -32,7 +32,7 @@ const services = [
     title: "Content creation",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/content-creation",
+    link: "/content-creation",
   },
   {
     id: "4",
@@ -40,7 +40,7 @@ const services = [
     title: "UI/UX Design",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/graphic-design",
+    link: "/graphic-design",
   },
   {
     id: "5",
@@ -48,7 +48,7 @@ const services = [
     title: "SEO optimization",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/seo-optimization",
+    link: "/seo-optimization",
   },
   {
     id: "6",
@@ -56,7 +56,7 @@ const services = [
     title: "Social media management",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/social-media-management",
+    link: "/social-media-management",
   },
   {
     id: "7",
@@ -64,7 +64,7 @@ const services = [
     title: "Video production",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/video-production",
+    link: "/video-production",
   },
   {
     id: "8",
@@ -72,7 +72,7 @@ const services = [
     title: "Influencers marketing",
     description:
       "Designed user interface contributes to a positive and a good user experience.",
-    link: "/service/influencers-marketing",
+    link: "/influencers-marketing",
   },
 ];
 

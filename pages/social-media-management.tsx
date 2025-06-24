@@ -1,5 +1,5 @@
-import ServiceDetails from "../../components/service-details/video-production";
-import Wrapper from "../../layouts/Wrapper";
+import ServiceDetails from "../components/service-details/social-media-management";
+import Wrapper from "../layouts/Wrapper";
 
 export const metadata = {
   title:

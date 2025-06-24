@@ -1614,7 +1614,7 @@ picture.jarallax-img img {
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   height: "580px";
-  padding-top: "30px";
+padding-Top: "30px"
 }
 
 @media only screen and (min-width: 992px) {
@@ -6310,3 +6310,24 @@ form .btn {
 }
 
 
+.company-profile-wrapper {
+  background-color: #f6f6f6;
+  padding: 80px 20px;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.pdf-viewer {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
