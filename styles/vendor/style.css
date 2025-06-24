@@ -1613,6 +1613,8 @@ picture.jarallax-img img {
   padding: 40px 30px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  height: "580px";
+  padding-top: "30px";
 }
 
 @media only screen and (min-width: 992px) {
@@ -4889,6 +4891,10 @@ form .btn {
 .breadcrumb-wrapper {
   height: 350px;
   margin-top: 68px;
+  background-image: url("/assets/img/three-confident-professional-businessmen-in-formal-2024-11-18-09-35-51-utc.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 @media only screen and (min-width: 992px) {
   .breadcrumb-wrapper {
@@ -6175,7 +6181,9 @@ form .btn {
   color: #fff;
 }
 
-
+.orange-text {
+  color: #ff971e;
+}
 
 
 
@@ -6300,3 +6308,5 @@ form .btn {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+

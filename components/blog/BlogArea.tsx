@@ -48,9 +48,7 @@ const BlogArea = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="display-6 fw-bold mb-3" style={{ color: "#ff971e" }}>
-              Our Blog Post
-            </h2>
+            <h2 className="display-6 fw-bold mb-3">Our Blog Post</h2>
             <p>
               Welcome to the Sole Digital Media blog, your go-to resource for
               the latest insights, strategies, and trends in digital marketing.

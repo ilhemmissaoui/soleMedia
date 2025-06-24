@@ -12,11 +12,6 @@ const Breacrumb: React.FC<BreadcrumbProps> = ({ title, subtitle }) => {
       className="breadcrumb-wrapper bg-img jarallax bg-overlay"
       data-jarallax=""
       data-speed="0.6"
-      style={{
-        backgroundImage:
-          "url(/assets/img/three-confident-professional-businessmen-in-formal-2024-11-18-09-35-51-utc.jpg)",
-        backgroundAttachment: "fixed",
-      }}
     >
       <div className="container h-100">
         <div className="breadcrumb-content h-100">
