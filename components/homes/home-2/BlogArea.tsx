@@ -23,7 +23,7 @@ const BlogArea = () => {
           <div className="row g-4">
             <div className="col-12 col-md-6 col-lg-4">
               <div className="blog-card-two">
-                <img src="/assets/img/work1.png" alt="" />
+                <img src="/assets/img/work1.png" loading="lazy" />
                 <div className="blog-content">
                   <div className="blog-meta d-flex align-items-center">
                     <a href="#">March 26, 24</a>
@@ -39,7 +39,7 @@ const BlogArea = () => {
 
             <div className="col-12 col-md-6 col-lg-4">
               <div className="blog-card-two">
-                <img src="/assets/img/work2.png" alt="" />
+                <img src="/assets/img/work2.png" loading="lazy" />
                 <div className="blog-content">
                   <div className="blog-meta d-flex align-items-center">
                     <a href="#">March 26, 24</a>
@@ -55,7 +55,7 @@ const BlogArea = () => {
 
             <div className="col-12 col-md-6 col-lg-4">
               <div className="blog-card-two">
-                <img src="/assets/img/work3.png" alt="" />
+                <img src="/assets/img/work3.png"loading="lazy" />
                 <div className="blog-content">
                   <div className="blog-meta d-flex align-items-center">
                     <a href="#">March 26, 24</a>

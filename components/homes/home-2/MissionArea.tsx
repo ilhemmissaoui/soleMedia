@@ -37,7 +37,7 @@ const MissionArea = () => {
               variants={fadeInUp}
             >
               <div className="mission-vision-img-container">
-                <img src="/assets/img/cc2.png" alt="" />
+                <img src="/assets/img/cc2.png" loading="lazy" />
 
                 <div
                   className="experience text-center"

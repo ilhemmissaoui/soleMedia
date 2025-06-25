@@ -30,10 +30,10 @@ const CtaArea = () => {
                   </div>
 
                   <div className="clients-images">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" />
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" />
-                    <img src="https://randomuser.me/api/portraits/women/3.jpg" />
-                    <img src="https://randomuser.me/api/portraits/men/4.jpg" />
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" loading="lazy" />
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" loading="lazy" />
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" loading="lazy" />
+                    <img src="https://randomuser.me/api/portraits/men/4.jpg"  loading="lazy"/>
                   </div>
                 </div>
 

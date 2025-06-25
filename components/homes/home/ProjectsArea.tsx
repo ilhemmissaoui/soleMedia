@@ -29,7 +29,7 @@ const ProjectsArea = () => {
           <div className="row g-4 g-xl-5">
             <div className="col-md-6">
               <div className="portfolio-card">
-                <img src="/assets/img/bg-img/7.jpg" alt="" />
+                <img src="/assets/img/bg-img/7.jpg" loading="lazy" />
 
                 <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                   <div className="me-4">
@@ -73,7 +73,7 @@ const ProjectsArea = () => {
 
             <div className="col-md-6">
               <div className="portfolio-card">
-                <img src="/assets/img/bg-img/8.jpg" alt="" />
+                <img src="/assets/img/bg-img/8.jpg" loading="lazy" />
 
                 <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                   <div className="me-4">
@@ -117,7 +117,7 @@ const ProjectsArea = () => {
 
             <div className="col-md-6">
               <div className="portfolio-card">
-                <img src="/assets/img/bg-img/9.jpg" alt="" />
+                <img src="/assets/img/bg-img/9.jpg" loading="lazy" />
 
                 <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                   <div className="me-4">
@@ -161,7 +161,7 @@ const ProjectsArea = () => {
 
             <div className="col-md-6">
               <div className="portfolio-card">
-                <img src="/assets/img/bg-img/10.jpg" alt="" />
+                <img src="/assets/img/bg-img/10.jpg" loading="lazy" />
 
                 <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                   <div className="me-4">

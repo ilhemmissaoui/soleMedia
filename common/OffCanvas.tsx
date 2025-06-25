@@ -18,12 +18,14 @@ const OffCanvas = ({ openCanvas, setOpenCavas }: any) => {
               src="/assets/img/footerLogo.svg"
               alt="Dark Logo"
               style={{ maxHeight: "30px", width: "auto" }}
+              loading="lazy"
             />
             <img
               className="light-logo"
               src="/assets/img/footerLogo.svg"
               alt="Light Logo"
               style={{ maxHeight: "30px", width: "auto" }}
+              loading="lazy"
             />
           </div>
 

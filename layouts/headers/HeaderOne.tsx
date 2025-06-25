@@ -54,13 +54,13 @@ const HeaderOne = ({ style_2 }: any) => {
               <img
                 className="dark-logo"
                 src="/assets/img/footerLogo.svg"
-                alt=""
+               loading="lazy"
                 style={{ maxWidth: "180px", height: "auto" }}
               />
               <img
                 className="light-logo"
                 src="/assets/img/footerLogo.svg"
-                alt=""
+                loading="lazy"
                 style={{ maxWidth: "180px", height: "auto" }}
               />
             </Link>

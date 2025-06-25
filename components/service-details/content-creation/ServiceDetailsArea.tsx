@@ -19,7 +19,7 @@ const ServiceDetailsArea = () => {
                 <img
                   className="rounded-lg"
                   src="/assets/img/content1.jpg"
-                  alt=""
+                 loading="lazy"
                 />
                 <h2>
                   Content creation that connects, empowers, and transforms
@@ -62,10 +62,10 @@ const ServiceDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/content3.jpg" alt="" />
+                    <img src="/assets/img/content3.jpg" loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/content4.jpg" alt="" />
+                    <img src="/assets/img/content4.jpg" loading="lazy" />
                   </div>
                 </div>
               </div>

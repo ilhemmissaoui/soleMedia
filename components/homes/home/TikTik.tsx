@@ -33,6 +33,7 @@ const TikTok = () => {
                         height: "50px",
                         objectFit: "cover",
                       }}
+                      loading="lazy"
                     />
                     <img
                       src="https://randomuser.me/api/portraits/men/2.jpg"
@@ -42,10 +43,12 @@ const TikTok = () => {
                         height: "50px",
                         objectFit: "cover",
                       }}
+                      loading="lazy"
                     />
                     <img
                       src="https://randomuser.me/api/portraits/women/3.jpg"
                       alt="Client 3"
+                      loading="lazy"
                       style={{
                         width: "50px",
                         height: "50px",
@@ -55,6 +58,7 @@ const TikTok = () => {
                     <img
                       src="https://randomuser.me/api/portraits/men/4.jpg"
                       alt="Client 4"
+                      loading="lazy"
                       style={{
                         width: "50px",
                         height: "50px",

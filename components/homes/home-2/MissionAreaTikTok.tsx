@@ -23,7 +23,7 @@ const MissionAreaTikTok = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="mission-vision-img-container">
-                <img src="/assets/img/cc2.png" alt="" />
+                <img src="/assets/img/cc2.png" loading="lazy" />
                 <div
                   className="experience text-center"
                   style={{

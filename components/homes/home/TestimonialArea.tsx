@@ -61,7 +61,7 @@ const TestimonialArea = () => {
                     </p>
                     <div className="border-line"></div>
                     <div className="testimonial-info d-flex align-items-center">
-                      <img src="/assets/img/bg-img/16.png" alt="" />
+                      <img src="/assets/img/bg-img/16.png" loading="lazy" />
                       <div>
                         <h4>Daniyel Karlos</h4>
                         <p className="mb-0">UX Designer</p>
@@ -80,7 +80,7 @@ const TestimonialArea = () => {
                     </p>
                     <div className="border-line"></div>
                     <div className="testimonial-info d-flex align-items-center">
-                      <img src="/assets/img/bg-img/16.png" alt="" />
+                      <img src="/assets/img/bg-img/16.png"loading="lazy" />
                       <div>
                         <h4>Daniyel Karlos</h4>
                         <p className="mb-0">UX Designer</p>
@@ -99,7 +99,7 @@ const TestimonialArea = () => {
                     </p>
                     <div className="border-line"></div>
                     <div className="testimonial-info d-flex align-items-center">
-                      <img src="/assets/img/bg-img/16.png" alt="" />
+                      <img src="/assets/img/bg-img/16.png" loading="lazy" />
                       <div>
                         <h4>Daniyel Karlos</h4>
                         <p className="mb-0">UX Designer</p>

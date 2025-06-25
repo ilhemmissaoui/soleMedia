@@ -16,7 +16,7 @@ const ServiceDetailsArea = () => {
           <div className="row g-4 g-xxl-5">
             <div className="col-12 col-lg-8">
               <div className="service-details-content">
-                <img className="rounded-lg" src="/assets/img/dev1.jpg" alt="" />
+                <img className="rounded-lg" src="/assets/img/dev1.jpg"loading="lazy" />
                 <h2>
                   We believe in the power of web development to drive societal
                   changeone line of code at a time.
@@ -61,10 +61,10 @@ const ServiceDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/dev2.jpg" alt="" />
+                    <img src="/assets/img/dev2.jpg"loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/dev3.jpg" alt="" />
+                    <img src="/assets/img/dev3.jpg"loading="lazy" />
                   </div>
                 </div>
               </div>

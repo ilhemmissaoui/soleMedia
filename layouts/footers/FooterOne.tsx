@@ -17,15 +17,16 @@ const FooterOne = ({ style_2 }: any) => {
                   <img
                     className="dark-logo"
                     src="/assets/img/footerLogo.svg"
-                    alt=""
+                    
                     width="210"
                     height="auto"
                     style={{ maxWidth: "100%" }}
+                    loading="lazy"
                   />
                   <img
                     className="light-logo"
                     src="/assets/img/footerLogo.svg"
-                    alt=""
+                    loading="lazy"
                     width="210"
                     height="auto"
                     style={{ maxWidth: "100%" }}

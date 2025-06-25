@@ -10,7 +10,7 @@ const PortfolioDetailsArea = () => {
           <div className="row g-4 g-xl-5">
             <div className="col-12">
               <div className="portfolio-details-content">
-                <img src="/assets/img/burger/burgerr.jpg" alt="" />
+                <img src="/assets/img/burger/burgerr.jpg" loading="lazy" />
               </div>
             </div>
 
@@ -34,10 +34,10 @@ const PortfolioDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/bg-img/7.jpg" alt="" />
+                    <img src="/assets/img/bg-img/7.jpg" loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/bg-img/8.jpg" alt="" />
+                    <img src="/assets/img/bg-img/8.jpg" loading="lazy" />
                   </div>
                 </div>
 

@@ -27,7 +27,7 @@ const AwardsArea = () => {
                   expertise.</p>
               </div>
               <div className="award-image">
-                <img src="/assets/img/bg-img/12.png" alt="" />
+                <img src="/assets/img/bg-img/12.png" loading="lazy"/>
               </div>
               <div className="awarded-year">
                 <h2>2024</h2>
@@ -42,7 +42,7 @@ const AwardsArea = () => {
                   expertise.</p>
               </div>
               <div className="award-image">
-                <img src="/assets/img/bg-img/13.png" alt="" />
+                <img src="/assets/img/bg-img/13.png" loading="lazy"/>
               </div>
               <div className="awarded-year">
                 <h2>2022</h2>
@@ -57,7 +57,7 @@ const AwardsArea = () => {
                   expertise.</p>
               </div>
               <div className="award-image">
-                <img src="/assets/img/bg-img/14.png" alt="" />
+                <img src="/assets/img/bg-img/14.png" loading="lazy" />
               </div>
               <div className="awarded-year">
                 <h2>2020</h2>
@@ -72,7 +72,7 @@ const AwardsArea = () => {
                   expertise.</p>
               </div>
               <div className="award-image">
-                <img src="/assets/img/bg-img/15.png" alt="" />
+                <img src="/assets/img/bg-img/15.png" loading="lazy" />
               </div>
               <div className="awarded-year">
                 <h2>2018</h2>

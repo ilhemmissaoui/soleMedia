@@ -12,7 +12,7 @@ const BlogDetailsArea = () => {
           <div className="row g-4 g-xl-5">
             <div className="col-12 col-md-7 col-lg-8">
               <div className="single-blog">
-                <img src="/assets/img/blogs/dev.jpg" alt="" />
+                <img src="/assets/img/blogs/dev.jpg" loading="lazy" />
                 <div className="blog-meta d-flex align-items-center">
                   <a href="#">March 26, 24</a>
                   <div className="dot"></div>
@@ -157,7 +157,7 @@ const BlogDetailsArea = () => {
                       <div className="blog-thumbnail">
                         <img
                           src="/assets/img/influencers-vlogging-from-home-2025-03-16-03-48-42-utc.jpg"
-                          alt=""
+                          loading="lazy"
                         />
                       </div>
                       <div className="blog-content">
@@ -172,7 +172,7 @@ const BlogDetailsArea = () => {
 
                     <div className="widget-blog-post">
                       <div className="blog-thumbnail">
-                        <img src="/assets/img/med5.jpg" alt="" />
+                        <img src="/assets/img/med5.jpg" loading="lazy" />
                       </div>
                       <div className="blog-content">
                         <h6>
@@ -186,7 +186,7 @@ const BlogDetailsArea = () => {
 
                     <div className="widget-blog-post">
                       <div className="blog-thumbnail">
-                        <img src="/assets/img/med3.jpg" alt="" />
+                        <img src="/assets/img/med3.jpg" loading="lazy" />
                       </div>
                       <div className="blog-content">
                         <h6>

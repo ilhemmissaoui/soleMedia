@@ -68,6 +68,7 @@ const TestimonialArea = () => {
                     <div className="testimonial-info d-flex align-items-center">
                       <img
                         src="https://randomuser.me/api/portraits/women/45.jpg"
+                        loading="lazy"
                         alt="Sarah Miller"
                         style={{
                           width: "60px",
@@ -124,6 +125,7 @@ const TestimonialArea = () => {
                           borderRadius: "50%",
                           objectFit: "cover",
                         }}
+                        loading="lazy"
                       />
                       <div>
                         <h4>James Wilson</h4>
@@ -165,6 +167,7 @@ const TestimonialArea = () => {
                     <div className="border-line"></div>
                     <div className="testimonial-info d-flex align-items-center">
                       <img
+                      loading="lazy"
                         src="https://randomuser.me/api/portraits/women/68.jpg"
                         alt="Emma Davis"
                         style={{

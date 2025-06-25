@@ -171,7 +171,7 @@ const PortfolioArea = () => {
               <div key={pIdx} className="row g-4 g-xl-5 align-items-center">
                 <div className="col-12 col-md-6">
                   <div className="portfolio-card">
-                    <img src={project.image} alt={project.title} />
+                    <img src={project.image} alt={project.title} loading="lazy" />
                     <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                       <div className="me-4">
                         <h3 className="mb-0">Website Design</h3>
@@ -204,7 +204,7 @@ const PortfolioArea = () => {
                     {project.gallery.map((img, i) => (
                       <div key={i} className="col-12 col-md-4">
                         <div className="portfolio-card">
-                          <img src={img} alt="" />
+                          <img src={img}loading="lazy" />
                         </div>
                       </div>
                     ))}

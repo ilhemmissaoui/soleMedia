@@ -99,7 +99,7 @@ const ProjectArea = () => {
                     <div className="portfolio-card-two">
                       <img
                         src={`/assets/img/${index < 5 ? `soleProjects/${img}` : `tourGuide/${img}`}`}
-                        alt=""
+                       loading="lazy"
                         style={{ width: "100%", height: "400px", objectFit: "cover" }}
                       />
                       <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">

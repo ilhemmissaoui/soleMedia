@@ -27,6 +27,7 @@ const AboutTikTok = () => {
                 <img
                   src="/assets/img/red-haired-girl-dancing-in-front-of-smartphone-cam-2025-02-11-01-38-00-utc (1).jpg"
                   alt="About"
+                  loading="lazy"
                 />
               </div>
             </motion.div>

@@ -33,7 +33,7 @@ const AboutArea = () => {
           {/* Left Image Section */}
           <motion.div className="col-12 col-md-6" {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.2 }}>
             <div className="about-us-thumbnail">
-              <img src="/assets/img/about.jpg" alt="About" />
+              <img src="/assets/img/about.jpg" alt="About" loading="lazy" />
               <div className="top-content">
                 <motion.div className="clients-images d-flex gap-2" {...staggerList}>
                   {[1, 2, 3, 4].map((num, i) => (

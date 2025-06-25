@@ -16,7 +16,7 @@ const ServiceDetailsArea = () => {
           <div className="row g-4 g-xxl-5">
             <div className="col-12 col-lg-8">
               <div className="service-details-content">
-                <img className="rounded-lg" src="/assets/img/inf1.jpg" alt="" />
+                <img className="rounded-lg" src="/assets/img/inf1.jpg" loading="lazy" />
                 <h2>
                   Influencer marketing drives authentic connections and builds
                   trust—one collaboration at a time.
@@ -61,10 +61,10 @@ const ServiceDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/dig2.jpg" alt="" />
+                    <img src="/assets/img/dig2.jpg" loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/dig3.jpg" alt="" />
+                    <img src="/assets/img/dig3.jpg" loading="lazy" />
                   </div>
                 </div>
               </div>

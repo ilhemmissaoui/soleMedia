@@ -16,7 +16,7 @@ const ServiceDetailsArea = () => {
           <div className="row g-4 g-xxl-5">
             <div className="col-12 col-lg-8">
               <div className="service-details-content">
-                <img className="rounded-lg" src="/assets/img/med2.jpg" alt="" />
+                <img className="rounded-lg" src="/assets/img/med2.jpg" loading="lazy" />
                 <h2>
                   Social media management drives meaningfulconnections that
                   build brand loyalty and boost engagement.
@@ -59,10 +59,10 @@ const ServiceDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/med1.jpg" alt="" />
+                    <img src="/assets/img/med1.jpg" loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/med3.jpg" alt="" />
+                    <img src="/assets/img/med3.jpg" loading="lazy" />
                   </div>
                 </div>
               </div>

@@ -87,6 +87,7 @@ const FaqArea = ({ style_2 }: any) => {
                 <img
                   src="/assets/img/three-confident-professional-businessmen-in-formal-2024-11-18-09-35-51-utc.jpg"
                   alt="Team working"
+                  loading="lazy"
                 />
                 <div className="faq-info d-flex align-items-center">
                   <h2 className="mb-0">FAQ</h2>

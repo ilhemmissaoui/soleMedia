@@ -105,7 +105,7 @@ const BlogArea = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="portfolio-card">
-                  <img src={post.img} alt={post.title} />
+                  <img src={post.img} alt={post.title} loading="lazy" />
 
                   <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                     <div className="me-4">

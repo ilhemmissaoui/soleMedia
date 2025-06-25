@@ -20,12 +20,12 @@ const ErrorArea = () => {
                 <img
                   className="pb-2 dark-mode-404"
                   src="/assets/img/core-img/404.png"
-                  alt=""
+                  loading="lazy"
                 />
                 <img
                   className="pb-2 light-mode-404"
                   src="/assets/img/core-img/404-light.png"
-                  alt=""
+                  loading="lazy"
                 />
               </div>
               <div className="section-heading mt-5">

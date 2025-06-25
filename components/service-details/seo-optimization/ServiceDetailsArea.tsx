@@ -16,7 +16,7 @@ const ServiceDetailsArea = () => {
           <div className="row g-4 g-xxl-5">
             <div className="col-12 col-lg-8">
               <div className="service-details-content">
-                <img className="rounded-lg" src="/assets/img/seo1.jpg" alt="" />
+                <img className="rounded-lg" src="/assets/img/seo1.jpg" loading="lazy" />
                 <h2>
                   SEO optimization unlocks visibility,connecting brands with the
                   audiences that matter most.
@@ -55,10 +55,10 @@ const ServiceDetailsArea = () => {
 
                 <div className="row g-4">
                   <div className="col-6">
-                    <img src="/assets/img/seo3.jpg" alt="" />
+                    <img src="/assets/img/seo3.jpg" loading="lazy" />
                   </div>
                   <div className="col-6">
-                    <img src="/assets/img/digital-marketing.jpg" alt="" />
+                    <img src="/assets/img/digital-marketing.jpg" loading="lazy" />
                   </div>
                 </div>
               </div>
