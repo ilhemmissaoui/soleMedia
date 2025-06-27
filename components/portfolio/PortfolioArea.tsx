@@ -125,38 +125,68 @@ const portfolioData = [
     ],
   },
   {
-  category: "Aesthetics and Cosmetics",
-  projects: [
-    {
-      title: "Extra Beauty",
-      image: "/assets/img/extraBeauty/b1.jpg",
-      description:
-        "Extra Beauty is a refined digital platform created for the aesthetics and cosmetics industry. Designed to reflect elegance, self-care, and modern beauty trends, it connects clients with services, treatments, and brand identity through a luxurious digital experience.",
+    category: "Aesthetics and Cosmetics",
+    projects: [
+      {
+        title: "Extra Beauty",
+        image: "/assets/img/extraBeauty/b1.jpg",
+        description:
+          "Extra Beauty is a refined digital platform created for the aesthetics and cosmetics industry. Designed to reflect elegance, self-care, and modern beauty trends, it connects clients with services, treatments, and brand identity through a luxurious digital experience.",
 
-      details: [
-        {
-          label: "Elegant Visual Identity",
-          text: "Soft color palettes, minimal design, and clean typography deliver a luxurious, calming aesthetic that aligns with wellness and beauty standards."
-        },
-        {
-          label: "Service & Treatment Showcase",
-          text: "Interactive treatment pages, service filtering, and detailed visuals guide clients to explore offerings with clarity and confidence."
-        },
-        {
-          label: "Client-Centered UX",
-          text: "Responsive design, easy booking flows, and mobile optimization ensure an intuitive and soothing experience from homepage to appointment."
-        }
-      ],
+        details: [
+          {
+            label: "Elegant Visual Identity",
+            text: "Soft color palettes, minimal design, and clean typography deliver a luxurious, calming aesthetic that aligns with wellness and beauty standards.",
+          },
+          {
+            label: "Service & Treatment Showcase",
+            text: "Interactive treatment pages, service filtering, and detailed visuals guide clients to explore offerings with clarity and confidence.",
+          },
+          {
+            label: "Client-Centered UX",
+            text: "Responsive design, easy booking flows, and mobile optimization ensure an intuitive and soothing experience from homepage to appointment.",
+          },
+        ],
 
-      gallery: [
-        "/assets/img/extraBeauty/b2.jpg",
-        "/assets/img/extraBeauty/b3.jpg",
-        "/assets/img/extraBeauty/b4.jpg"
-      ]
-    }
-  ]
-}
+        gallery: [
+          "/assets/img/extraBeauty/b2.jpg",
+          "/assets/img/extraBeauty/b3.jpg",
+          "/assets/img/extraBeauty/b4.jpg",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Fashion and Shopping",
+    projects: [
+      {
+        title: "Cavaliero",
+        image: "/assets/img/cavaliero/04.jpg",
+        description:
+          "Cavaliero is a sophisticated fashion brand experience designed to elevate the online shopping journey for modern clothing enthusiasts. With a focus on timeless style, premium collections, and an elegant digital storefront, it redefines the way users explore and connect with fashion.",
 
+        details: [
+          {
+            label: "Stylish Visual Identity",
+            text: "Neutral tones, bold typography, and high-end photography reflect the brand’s commitment to elegance and contemporary design.",
+          },
+          {
+            label: "Clothing Collection Showcase",
+            text: "Filterable product listings, dynamic lookbooks, and zoomable images allow users to engage deeply with every item across categories.",
+          },
+          {
+            label: "User-Focused Shopping Experience",
+            text: "Responsive design, smooth checkout process, and mobile-first navigation provide a seamless, fashion-forward user journey.",
+          },
+        ],
+
+        gallery: [
+          "/assets/img/cavaliero/03.jpg",
+          "/assets/img/cavaliero/01.jpg",
+        ],
+      },
+    ],
+  },
 ];
 
 const PortfolioArea = () => {
@@ -171,7 +201,11 @@ const PortfolioArea = () => {
               <div key={pIdx} className="row g-4 g-xl-5 align-items-center">
                 <div className="col-12 col-md-6">
                   <div className="portfolio-card">
-                    <img src={project.image} alt={project.title} loading="lazy" />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                    />
                     <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
                       <div className="me-4">
                         <h3 className="mb-0">Website Design</h3>
@@ -204,7 +238,7 @@ const PortfolioArea = () => {
                     {project.gallery.map((img, i) => (
                       <div key={i} className="col-12 col-md-4">
                         <div className="portfolio-card">
-                          <img src={img}loading="lazy" />
+                          <img src={img} loading="lazy" />
                         </div>
                       </div>
                     ))}
